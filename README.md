@@ -2,13 +2,21 @@
 
 ## PHP 7.3 installation
 
-Before installing PHP, you must check if you have any existing PHP installation.
+### Ubuntu 18
 
-```bash
-php -v
+```
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php7.3
 ```
 
-If the output is not PHP 7.3, there you can proceed the installation.
+### MySQL 8 installation
 
-### Ubuntu 18
-sudo apt-get update
+```
+sudo curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
+sudo dpkg -i mysql-apt-config*
+sudo apt update
+sudo rm mysql-apt-config*
+sudo apt install mysql-server
+mysql_secure_installation
+```
