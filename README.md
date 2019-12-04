@@ -4,7 +4,11 @@
 
 ### MacOS
 
-On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our 
+On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our packages.
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ## PHP 7.3 installation
 
@@ -27,4 +31,10 @@ sudo apt update
 sudo rm mysql-apt-config*
 sudo apt install mysql-server
 mysql_secure_installation
+```
+
+## MacOS 10.14
+
+```
+brew install php@7.3
 ```
