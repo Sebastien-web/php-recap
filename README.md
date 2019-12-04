@@ -25,20 +25,29 @@ Open the Terminal app and type:
 
 ### Ubuntu 18.04
 
+
+#### Prerequisites
+
 ```
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
+```
+
+#### Installation
+```
 sudo apt install php7.3 -y
 ```
 
 ### MacOS 10.14
 
+#### Installation
 ```
 brew install php@7.3
 ```
 
 ### Windows 10
 
+#### Installation
 ```
 choco install php --version 7.3.12 -y
 ```
@@ -47,25 +56,51 @@ choco install php --version 7.3.12 -y
 
 ## Ubuntu 18.04
 
+#### Prerequisites
+
 ```
 sudo curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
 sudo dpkg -i mysql-apt-config*
 sudo apt update
 sudo rm mysql-apt-config*
+```
+
+#### Installation
+
+```
 sudo apt install mysql-server -y
+```
+
+#### Configuration
+
+```
 mysql_secure_installation
 ```
 
 ## MacOS 10.14
 
+#### Installation
+
 ```
 brew install mysql@8.0
+```
+
+##### Configuration
+
+```
 mysql_secure_installation
 ```
 
 ## Windows 10
 
+#### Installation
+
 ```
 choco install mysql --version 8.0.18 -y
+```
+
+##### Configuration
+
+```
 mysql_secure_installation
 ```
