@@ -55,3 +55,9 @@ sudo rm mysql-apt-config*
 sudo apt install mysql-server -y
 mysql_secure_installation
 ```
+
+## MacOS 10.14
+
+```
+brew install mysql@8.0
+```
