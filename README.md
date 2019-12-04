@@ -20,6 +20,12 @@ sudo apt update
 sudo apt install php7.3
 ```
 
+## MacOS 10.14
+
+```
+brew install php@7.3
+```
+
 ## MySQL 8 installation
 
 ## Ubuntu 18.04
@@ -31,10 +37,4 @@ sudo apt update
 sudo rm mysql-apt-config*
 sudo apt install mysql-server
 mysql_secure_installation
-```
-
-## MacOS 10.14
-
-```
-brew install php@7.3
 ```
