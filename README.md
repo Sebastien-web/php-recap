@@ -12,6 +12,8 @@ Open the command prompt in administrator mode and type:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
+Then restart your command prompt. **On Windows, after each installation, you must start a new command prompt** in order to use the installed packages.
+
 ### MacOS 10.14
 
 On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our packages.
@@ -112,6 +114,8 @@ choco install mysql --version 8.0.18 -y
 ```
 
 ##### Configuration
+
+*On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
 
 ```
 mysql_secure_installation
