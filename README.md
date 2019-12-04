@@ -20,7 +20,7 @@ sudo apt update
 sudo apt install php7.3
 ```
 
-## MacOS 10.14
+### MacOS 10.14
 
 ```
 brew install php@7.3
