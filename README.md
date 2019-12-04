@@ -1,5 +1,11 @@
 # PHP recap
 
+## Prerequisites
+
+### MacOS
+
+On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our 
+
 ## PHP 7.3 installation
 
 ### Ubuntu 18.04
