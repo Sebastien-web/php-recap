@@ -34,6 +34,7 @@ sudo apt update
 ```
 
 #### Installation
+
 ```
 sudo apt install php7.3 -y
 ```
@@ -41,16 +42,27 @@ sudo apt install php7.3 -y
 ### MacOS 10.14
 
 #### Installation
+
 ```
 brew install php@7.3
 ```
 
+**[Installed PHP Modules]**
+bcmath, bz2, calendar, Core, ctype, curl, date, dba, dom, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, intl, json, ldap, libxml, mbstring, mysqli, mysqlnd, odbc, openssl, pcntl, pcre, PDO, pdo_dblib, pdo_mysql, PDO_ODBC, pdo_pgsql, pdo_sqlite, pgsql, Phar, phpdbg_webhelper, posix, pspell, readline, Reflection, session, shmop, SimpleXML, soap, sockets, sodium, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib
+
+**[Installed Zend Modules]** Xdebug, Zend OPcache
+
 ### Windows 10
 
 #### Installation
+
 ```
 choco install php --version 7.3.12 -y
 ```
+
+**[Installed PHP Modules]** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+
+**[Installed Zend Modules]** 
 
 ## MySQL 8 installation
 
