@@ -60,4 +60,12 @@ mysql_secure_installation
 
 ```
 brew install mysql@8.0
+mysql_secure_installation
+```
+
+## Windows 10
+
+```
+choco install mysql --version 8.0.18 -y
+mysql_secure_installation
 ```
