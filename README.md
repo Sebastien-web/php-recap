@@ -2,10 +2,21 @@
 
 ## Prerequisites
 
-### MacOS
+### Windows 10
+
+On Windows 10, there is no package manager by default. We need to install the Chocolatey package manager in order to install our packages.
+
+Open the PowerShell app in admin mode and type:
+
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+### MacOS 10.14
 
 On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our packages.
 
+Open the Terminal app and type:
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
