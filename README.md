@@ -14,7 +14,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 Then restart your PowerShell.
 
-**On Windows, after each installation, you must start a new Power Shell** in order to use the installed packages. All command listed here must only be used inside the PowerShell (not the default command prompt).
+**On Windows, after each installation, you must start a new PowerShell** in order to use the installed packages. All command listed here must only be used inside the PowerShell (not the default command prompt).
 
 ### MacOS 10.14
 
@@ -65,9 +65,7 @@ brew install php@7.3
 
 ```
 choco install php --version 7.3.12 -y
-
-# Xdebug install
-powershell -command "iwr -outf C:\tools\php73\ext\php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll"
+iwr -outf C:\tools\php73\ext\php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
 ```
 
 **[Installed PHP Modules]** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
