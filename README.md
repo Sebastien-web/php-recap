@@ -141,7 +141,7 @@ mysql_secure_installation
 
 ## Composer installation
 
-### Ubuntu 18.04 & MacOS 10.14
+### Ubuntu 18.04
 
 #### Installation
 
@@ -152,16 +152,16 @@ sudo php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
+### MacOS 10.14
+
+```
+brew install composer
+```
+
 ### Windows 10
 
 #### Installation
 
 ```
-New-Item -ItemType Directory -Force -Path C:\tools\composer
-php -r "copy('https://getcomposer.org/installer', 'C:\tools\composer\composer-setup.php');"
-php C:\tools\composer\composer-setup.php
-php -r "unlink('C:\tools\composer\composer-setup.php');"
-New-Item -ItemType File -Path C:\tools\composer\composer.bat
-Add-Content C:\tools\composer\composer.bat "@php %~dp0composer.phar"
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
+choco install composer --version 5.0.0 -y
 ```
