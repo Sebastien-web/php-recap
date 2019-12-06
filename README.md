@@ -38,12 +38,12 @@ sudo apt update
 #### Installation
 
 ```
-sudo apt install php7.3 php7.3-mbstring php7.3-mysql php7.3-xml -y
+sudo apt install php7.3 php7.3-mbstring php7.3-mysql php7.3-xml php-xdebug -y
 ```
 
-**[Installed PHP Modules]** calendar, Core, ctype, date, dom, exif, fileinfo, filter, ftp, gettext, hash, iconv, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, Phar, posix, readline, Reflection, session, shmop, SimpleXML, sockets, sodium, SPL, standard, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zlib
+**[Installed PHP Modules]** calendar, Core, ctype, date, dom, exif, fileinfo, filter, ftp, gettext, hash, iconv, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, Phar, posix, readline, Reflection, session, shmop, SimpleXML, sockets, sodium, SPL, standard, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xdebug, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zlib
 
-**[Installed Zend Modules]** Zend OPcache
+**[Installed Zend Modules]** Xdebug, Zend OPcache
 
 ### MacOS 10.14
 
