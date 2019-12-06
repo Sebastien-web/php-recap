@@ -8,7 +8,7 @@ On Windows 10, there is no package manager by default. We need to install the Ch
 
 Open the PowerShell command prompt in administrator mode and type:
 
-```
+```bash
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
@@ -22,7 +22,7 @@ On MacOS, there is no package manager by default. We need to install the Homebre
 
 Open the Terminal app and type:
 
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -30,7 +30,7 @@ Open the Terminal app and type:
 
 On Ubuntu, CURL is needed in order to install some packages with the default package manager.
 
-```
+```bash
 sudo apt update
 sudo apt install curl -y
 ```
