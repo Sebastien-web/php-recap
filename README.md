@@ -28,9 +28,11 @@ Open the Terminal app and type:
 
 ### Ubuntu 18.04
 
+On Ubuntu, CURL is needed in order to install some packages with the default package manager.
+
 ```
 sudo apt update
-
+sudo apt install curl -y
 ```
 
 ## PHP 7.3 installation
@@ -77,8 +79,6 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdeb
 ### Ubuntu 18.04
 
 ```
-sudo apt update
-sudo apt install curl -y
 sudo curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
 sudo dpkg -i mysql-apt-config*
 sudo apt update
@@ -124,3 +124,24 @@ brew install composer
 ```
 choco install composer --version 5.0.0 -y
 ```
+
+## NodeJS 12 installation
+
+### Ubuntu 18.04
+
+```
+curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs -y
+```
+
+### MacOS 10.14
+
+```
+brew install node@12
+```
+
+### Windows 10
+
+```
+choco install nodejs --version 12.13.1 -y
