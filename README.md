@@ -74,7 +74,7 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdeb
 
 **[Installed Zend Modules]** Xdebug
 
-## MySQL 8 installation
+## MySQL 8.0 installation
 
 ### Ubuntu 18.04
 
@@ -102,12 +102,12 @@ choco install mysql --version 8.0.18 -y
 mysql_secure_installation
 ```
 
-## Composer installation
+## Composer 1.9 installation
 
 ### Ubuntu 18.04
 
 ```
-sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php -r "copy('https://getcomposer.org/download/1.9.1/composer.phar', 'composer-setup.php');"
 sudo php composer-setup.php
 sudo php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
@@ -116,7 +116,7 @@ sudo mv composer.phar /usr/local/bin/composer
 ### MacOS 10.14
 
 ```
-brew install composer
+brew install composer@1.9.1
 ```
 
 ### Windows 10
@@ -145,3 +145,24 @@ brew install node@12
 
 ```
 choco install nodejs --version 12.13.1 -y
+```
+
+## Yarn 1.19 installation
+
+### Ubuntu 18.04
+
+```
+curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+```
+
+### MacOS 10.14
+
+```
+brew install yarn@1.19
+```
+
+### Windows 10
+
+```
+choco install yarn --version 1.19.2
+```
