@@ -84,14 +84,12 @@ sudo dpkg -i mysql-apt-config*
 sudo apt update
 sudo rm mysql-apt-config*
 sudo apt install mysql-server -y
-mysql_secure_installation
 ```
 
 ### MacOS 10.14
 
 ```
 brew install mysql@8.0
-mysql_secure_installation
 ```
 
 ### Windows 10
@@ -99,7 +97,6 @@ mysql_secure_installation
 *On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
 ```
 choco install mysql --version 8.0.18 -y
-mysql_secure_installation
 ```
 
 ## Composer 1.9 installation
