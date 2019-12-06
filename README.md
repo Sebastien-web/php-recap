@@ -158,5 +158,10 @@ sudo mv composer.phar /usr/local/bin/composer
 
 ```
 New-Item -ItemType Directory -Force -Path C:\tools\composer
+php -r "copy('https://getcomposer.org/installer', 'C:\tools\composer\composer-setup.php');"
+php C:\tools\composer\composer-setup.php
+php -r "unlink('C:\tools\composer\composer-setup.php');"
+New-Item -ItemType File -Path C:\tools\composer\composer.bat
+Add-Content C:\tools\composer\composer.bat "@php %~dp0composer.phar"
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
 ```
