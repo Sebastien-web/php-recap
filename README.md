@@ -12,7 +12,9 @@ Open the PowerShell command prompt in administrator mode and type:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
-Then restart your command prompt. **On Windows, after each installation, you must start a new command prompt** in order to use the installed packages.
+Then restart your PowerShell.
+
+**On Windows, after each installation, you must start a new Power Shell** in order to use the installed packages. All command listed here must only be used inside the PowerShell (not the default command prompt).
 
 ### MacOS 10.14
 
