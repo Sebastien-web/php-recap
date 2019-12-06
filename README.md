@@ -30,24 +30,16 @@ Open the Terminal app and type:
 
 ```
 sudo apt update
-sudo apt install curl -y
+
 ```
 
 ## PHP 7.3 installation
 
 ### Ubuntu 18.04
 
-
-#### Prerequisites
-
 ```
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
-```
-
-#### Installation
-
-```
 sudo apt install php7.3 php7.3-mbstring php7.3-mysql php7.3-xml php-xdebug -y
 ```
 
@@ -56,8 +48,6 @@ sudo apt install php7.3 php7.3-mbstring php7.3-mysql php7.3-xml php-xdebug -y
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
 ### MacOS 10.14
-
-#### Installation
 
 ```
 brew install php@7.3
@@ -68,8 +58,6 @@ brew install php@7.3
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
 ### Windows 10
-
-#### Installation
 
 ```
 choco install php --version 7.3.12 -y
@@ -88,62 +76,35 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdeb
 
 ### Ubuntu 18.04
 
-#### Prerequisites
-
 ```
+sudo apt update
+sudo apt install curl -y
 sudo curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
 sudo dpkg -i mysql-apt-config*
 sudo apt update
 sudo rm mysql-apt-config*
-```
-
-#### Installation
-
-```
 sudo apt install mysql-server -y
-```
-
-#### Configuration
-
-```
 mysql_secure_installation
 ```
 
 ### MacOS 10.14
 
-#### Installation
-
 ```
 brew install mysql@8.0
-```
-
-##### Configuration
-
-```
 mysql_secure_installation
 ```
 
 ### Windows 10
 
-#### Installation
-
+*On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
 ```
 choco install mysql --version 8.0.18 -y
-```
-
-##### Configuration
-
-*On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
-
-```
 mysql_secure_installation
 ```
 
 ## Composer installation
 
 ### Ubuntu 18.04
-
-#### Installation
 
 ```
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -159,8 +120,6 @@ brew install composer
 ```
 
 ### Windows 10
-
-#### Installation
 
 ```
 choco install composer --version 5.0.0 -y
