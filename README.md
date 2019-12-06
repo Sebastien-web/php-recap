@@ -6,7 +6,7 @@
 
 On Windows 10, there is no package manager by default. We need to install the Chocolatey package manager in order to install our packages.
 
-Open the command prompt in administrator mode and type:
+Open the PowerShell command prompt in administrator mode and type:
 
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
