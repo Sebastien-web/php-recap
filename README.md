@@ -21,8 +21,16 @@ Then restart your PowerShell.
 On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our packages.
 
 Open the Terminal app and type:
+
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### Ubuntu 18.04
+
+```
+sudo apt update
+sudo apt install curl -y
 ```
 
 ## PHP 7.3 installation
