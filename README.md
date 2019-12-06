@@ -85,7 +85,7 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdeb
 
 ## MySQL 8 installation
 
-## Ubuntu 18.04
+### Ubuntu 18.04
 
 #### Prerequisites
 
@@ -108,7 +108,7 @@ sudo apt install mysql-server -y
 mysql_secure_installation
 ```
 
-## MacOS 10.14
+### MacOS 10.14
 
 #### Installation
 
@@ -122,7 +122,7 @@ brew install mysql@8.0
 mysql_secure_installation
 ```
 
-## Windows 10
+### Windows 10
 
 #### Installation
 
@@ -136,4 +136,25 @@ choco install mysql --version 8.0.18 -y
 
 ```
 mysql_secure_installation
+```
+
+## Composer installation
+
+### Ubuntu 18.04 & MacOS 10.14
+
+#### Installation
+
+```
+sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php
+sudo php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
+```
+
+### Windows 10
+
+#### Installation
+
+```
+
 ```
