@@ -66,11 +66,14 @@ brew install php@7.3
 ```
 choco install php --version 7.3.12 -y
 iwr -outf C:\tools\php73\ext\php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
+Add-Content c:\tools\php73\php.ini "extension_dir = ext"
+Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll"
+((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=mbstring','extension=mbstring') | Set-Content -Path C:\tools\php73\php.ini
 ```
 
-**[Installed PHP Modules]** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xml, xmlreader, xmlwriter, zip, zlib
+**[Installed PHP Modules]** bcmath, calendar, Core, ctype, date, dom, filter, hash, iconv, json, libxml, mbstring, mysqlnd, pcre, PDO, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xdebug, xml, xmlreader, xmlwriter, zip, zlib
 
-**[Installed Zend Modules]** 
+**[Installed Zend Modules]** Xdebug
 
 ## MySQL 8 installation
 
