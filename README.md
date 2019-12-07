@@ -1,13 +1,6 @@
 # PHP recap
 
 
-
-
-
-
-
-
-
 ## Prerequisites
 
 ### Ubuntu 18.04
