@@ -1,8 +1,41 @@
 # PHP recap
 
+
+
+
+
+
+
+
+
 ## Prerequisites
 
+### Ubuntu 18.04
+
+![curl](https://user-images.githubusercontent.com/6952638/70372369-31785f00-18de-11ea-9835-2946537372ea.jpg)
+
+On Ubuntu, CURL is needed in order to install some packages with the default package manager.
+
+```bash
+sudo apt update
+sudo apt install curl -y
+```
+
+### MacOS 10.14
+
+![homebrew](https://user-images.githubusercontent.com/6952638/70372309-a0a18380-18dd-11ea-8280-e86e84f51043.png)
+
+On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our packages.
+
+Open the Terminal app and type:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 ### Windows 10
+
+![chocolatey](https://user-images.githubusercontent.com/6952638/70372307-a008ed00-18dd-11ea-8288-97a9fbc7fb46.png)
 
 On Windows 10, there is no package manager by default. We need to install the Chocolatey package manager in order to install our packages.
 
@@ -16,26 +49,10 @@ Then restart your PowerShell.
 
 **On Windows, after each installation, you must start a new PowerShell** in order to use the installed packages. All command listed here must only be used inside the PowerShell in administrator mode (not the default command prompt).
 
-### MacOS 10.14
-
-On MacOS, there is no package manager by default. We need to install the Homebrew package manager in order to install our packages.
-
-Open the Terminal app and type:
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-### Ubuntu 18.04
-
-On Ubuntu, CURL is needed in order to install some packages with the default package manager.
-
-```bash
-sudo apt update
-sudo apt install curl -y
-```
 
 ## PHP 7.3 installation
+
+![php](https://user-images.githubusercontent.com/6952638/70372327-bca52500-18dd-11ea-8638-7cdab7c5d6e0.png)
 
 ### Ubuntu 18.04
 
@@ -76,6 +93,8 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdeb
 
 ## MySQL 8.0 installation
 
+![mysql](https://user-images.githubusercontent.com/6952638/70372312-a0a18380-18dd-11ea-90df-b25acc5f1684.jpg)
+
 ### Ubuntu 18.04
 
 ```
@@ -100,6 +119,8 @@ choco install mysql --version 8.0.18 -y
 ```
 
 ## Composer 1.9 installation
+
+![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
 
 ### Ubuntu 18.04
 
@@ -145,6 +166,8 @@ choco install nodejs --version 12.13.1 -y
 ```
 
 ## Yarn 1.19 installation
+
+![yarn](https://user-images.githubusercontent.com/6952638/70372314-a13a1a00-18dd-11ea-9cdb-7b976c2beab8.png)
 
 ### Ubuntu 18.04
 
