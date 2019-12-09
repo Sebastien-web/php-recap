@@ -53,7 +53,8 @@ sudo apt install git@2.24
 ### MacOS 10.14
 
 ```
-brew install git@2.24
+brew install git
+brew link --overwrite git
 ```
 
 ### Windows 10
