@@ -73,9 +73,9 @@ brew install php@7.3
 
 ```
 choco install php --version 7.3.12 -y
-iwr -outf C:\tools\php73\ext\php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
+iwr -outf C:\tools\php73\ext\php_xdebug.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
 Add-Content c:\tools\php73\php.ini "extension_dir = ext"
-Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll"
+Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdebug.dll"
 ((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=mbstring','extension=mbstring') | Set-Content -Path C:\tools\php73\php.ini
 ((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=openssl','extension=openssl') | Set-Content -Path C:\tools\php73\php.ini
 ```
