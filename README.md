@@ -209,3 +209,17 @@ brew install yarn --ignore-dependencies
 ```
 choco install yarn --version 1.19.2
 ```
+
+## Symfony CLI installation
+
+### Ubuntu 18.04
+
+```
+curl -sS https://get.symfony.com/cli/installer | bash
+```
+
+### MacOS 10.14
+
+```
+curl -sS https://get.symfony.com/cli/installer | bash
+```
