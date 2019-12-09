@@ -60,7 +60,7 @@ brew link --overwrite git
 ### Windows 10
 
 ```
-choco install git
+choco install git -y
 ```
 
 ## PHP 7.3 installation
