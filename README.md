@@ -40,7 +40,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 Then restart your PowerShell.
 
-**On Windows, after each installation, you must start a new PowerShell** in order to use the installed packages. All command listed here must only be used inside the PowerShell in administrator mode (not the default command prompt).
+**On Windows, after each installation, you must start a new PowerShell** in order to use the installed packages. All command listed here must only be used inside the PowerShell in **administrator mode** (not the default command prompt).
 
 
 ## PHP 7.3 installation
