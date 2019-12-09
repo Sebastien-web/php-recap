@@ -210,7 +210,7 @@ brew install yarn --ignore-dependencies
 choco install yarn --version 1.19.2
 ```
 
-## Symfony CLI 4.11.2 installation
+## Symfony CLI 4.11 installation
 
 ### Ubuntu 18.04
 
