@@ -192,7 +192,7 @@ curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
 ### MacOS 10.14
 
 ```
-brew install yarn@1.19
+brew install yarn
 ```
 
 ### Windows 10
