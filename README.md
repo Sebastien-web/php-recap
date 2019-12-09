@@ -42,6 +42,25 @@ Then restart your PowerShell.
 
 **On Windows, after each installation, you must start a new PowerShell** in order to use the installed packages. All command listed here must only be used inside the PowerShell in **administrator mode** (not the default command prompt).
 
+## Git 2.24 installation
+
+### Ubuntu 18.04
+
+```
+sudo apt install git@2.24
+```
+
+### MacOS 10.14
+
+```
+brew install git@2.24
+```
+
+### Windows 10
+
+```
+choco install git --version 2.24.0
+```
 
 ## PHP 7.3 installation
 
