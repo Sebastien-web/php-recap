@@ -229,6 +229,6 @@ curl -sS https://get.symfony.com/cli/installer | bash
 ```
 New-Item -ItemType Directory -Force -Path C:\tools
 New-Item -ItemType Directory -Force -Path C:\tools\symfony
-iwr -outf C:\tools\symfony\symfony.exe https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iwr -outf C:\tools\symfony\symfony.exe https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
 ```
