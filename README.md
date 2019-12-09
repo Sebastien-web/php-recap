@@ -227,6 +227,7 @@ curl -sS https://get.symfony.com/cli/installer | bash
 ### Windows 10
 
 ```
+New-Item -ItemType Directory -Force -Path C:\tools
 New-Item -ItemType Directory -Force -Path C:\tools\symfony
 iwr -outf C:\tools\symfony https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
