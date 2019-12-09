@@ -117,11 +117,14 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdeb
 ### Ubuntu 18.04
 
 ```
+export DEBIAN_FRONTEND="noninteractive";
 sudo curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
-sudo dpkg -i mysql-apt-config*
+sudo -E dpkg -i mysql-apt-config*
 sudo apt update
 sudo rm mysql-apt-config*
-sudo apt install mysql-server -y
+sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/root-pass password root'
+sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/re-root-pass password root' 
+sudo -E apt install mysql-server -y
 ```
 
 ### MacOS 10.14
