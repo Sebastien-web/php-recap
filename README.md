@@ -210,7 +210,7 @@ brew install yarn --ignore-dependencies
 choco install yarn --version 1.19.2
 ```
 
-## Symfony CLI installation
+## Symfony CLI 4.11.2 installation
 
 ### Ubuntu 18.04
 
@@ -222,4 +222,12 @@ curl -sS https://get.symfony.com/cli/installer | bash
 
 ```
 curl -sS https://get.symfony.com/cli/installer | bash
+```
+
+### Windows 10
+
+```
+New-Item -ItemType Directory -Force -Path C:\tools\symfony
+iwr -outf C:\tools\symfony https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
 ```
