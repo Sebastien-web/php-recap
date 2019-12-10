@@ -207,7 +207,7 @@ brew install yarn --ignore-dependencies
 ### Windows 10
 
 ```
-choco install yarn --version 1.19.2
+choco install yarn --version 1.19.2 -y
 ```
 
 ## Symfony CLI 4.11 installation
