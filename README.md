@@ -154,8 +154,8 @@ The root password will be empty after this installation.
 ### Ubuntu 18.04
 
 ```
-sudo php -r "copy('https://getcomposer.org/download/1.9.1/composer.phar', 'composer-setup.php');"
-sudo php composer-setup.php
+sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --version 1.9.1
 sudo php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 ```
