@@ -3,6 +3,8 @@
 
 ## Prerequisites
 
+**For 64 bits architectures only.**
+
 ### Ubuntu 18.04
 
 ![curl](https://user-images.githubusercontent.com/6952638/70372369-31785f00-18de-11ea-9835-2946537372ea.jpg)
