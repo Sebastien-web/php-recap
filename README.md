@@ -128,11 +128,15 @@ sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/r
 sudo -E apt install mysql-server -y
 ```
 
+The root password will be set to "root" after this installation.
+
 ### MacOS 10.14
 
 ```
 brew install mysql@8.0
 ```
+
+The root password will be set to "root" after this installation.
 
 ### Windows 10
 
@@ -140,6 +144,8 @@ brew install mysql@8.0
 ```
 choco install mysql --version 8.0.18 -y
 ```
+
+The root password will be empty after this installation.
 
 ## Composer 1.9 installation
 
