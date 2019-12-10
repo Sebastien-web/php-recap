@@ -3,8 +3,6 @@
 
 ## Prerequisites
 
-**For 64 bits architectures only.**
-
 ### Ubuntu 18.04
 
 ![curl](https://user-images.githubusercontent.com/6952638/70372369-31785f00-18de-11ea-9835-2946537372ea.jpg)
@@ -77,6 +75,7 @@ sudo apt update
 sudo apt install php7.3 php7.3-mbstring php7.3-mysql php7.3-xml php-xdebug -y
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php/7.3/apache2/php.ini
 sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.3/apache2/php.ini
+sudo update-alternatives --set php /usr/bin/php7.3
 ```
 
 **[Installed PHP Modules]** calendar, Core, ctype, date, dom, exif, fileinfo, filter, ftp, gettext, hash, iconv, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, Phar, posix, readline, Reflection, session, shmop, SimpleXML, sockets, sodium, SPL, standard, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xdebug, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zlib
