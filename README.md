@@ -54,7 +54,7 @@ Then restart your PowerShell.
 ### Ubuntu 18.04
 
 ```
-sudo apt install git
+sudo apt install git -y
 ```
 
 ### MacOS 10.14
