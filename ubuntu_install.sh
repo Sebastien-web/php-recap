@@ -24,7 +24,7 @@ sudo rm mysql-apt-config*
 sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/root-pass password root'
 sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/re-root-pass password root' 
 sudo -E apt install mysql-server -y
-mysql -u root -p -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
+mysql -u root -proot -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
 
 # Composer
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
