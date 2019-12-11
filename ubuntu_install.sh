@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install curl -y
 
 # Git
-sudo apt install git
+sudo apt install git -y
 
 # PHP
 sudo add-apt-repository ppa:ondrej/php -y
