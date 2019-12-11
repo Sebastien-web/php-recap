@@ -10,10 +10,10 @@ sudo apt install git
 # PHP
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
-sudo apt install php7.3 php7.3-mbstring php7.3-mysql php7.3-xml php-xdebug -y
+sudo apt install php7.3 -y
+sudo apt install php7.3-mbstring php7.3-mysql php7.3-xml php-xdebug -y
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php/7.3/apache2/php.ini
 sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.3/apache2/php.ini
-sudo update-alternatives --set php /usr/bin/php7.3
 
 # Mysql
 export DEBIAN_FRONTEND="noninteractive";
