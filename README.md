@@ -9,7 +9,7 @@ wget -O - https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu
 ### Windows 10
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.s1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
 ```
 
 # Manual installation
