@@ -154,6 +154,7 @@ The root password will be set to "root" after this installation.
 *On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
 ```
 choco install mysql --version 8.0.18 -y
+mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
 ```
 
 The root password will be empty after this installation.
