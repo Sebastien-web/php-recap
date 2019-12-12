@@ -6,6 +6,12 @@
 wget -O - https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | bash
 ```
 
+### Windows 10
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.s1'))
+```
+
 # Manual installation
 
 ## Prerequisites
@@ -41,7 +47,7 @@ On Windows 10, there is no package manager by default. We need to install the Ch
 
 Open the PowerShell command prompt in administrator mode and type:
 
-```bash
+```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
