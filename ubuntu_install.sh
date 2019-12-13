@@ -17,7 +17,7 @@ sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.2/
 php -v
 
 # Mysql
-apt install mariadb-server=1:10.1.43-0ubuntu0.18.04.1 -y
+apt install mariadb-server-10.1 -y
 mysql -e "SELECT version();"
 
 # Composer
