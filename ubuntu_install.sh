@@ -25,19 +25,19 @@ sudo apt install composer=1.6.3-1 -y
 composer -v
 
 # NodeJS
-curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
-bash nodesource_setup.sh
-rm nodesource_setup.sh
-apt install nodejs -y
+sudo curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo rm nodesource_setup.sh
+sudo apt install nodejs -y
 node -v
 npm -v
 
 # Yarn
-curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+sudo curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
 source ~/.bashrc
 yarn -v
 
 # Symfony CLI
-curl -L https://github.com/symfony/cli/releases/download/v4.11.2/symfony_linux_386 -o /usr/local/bin/symfony
-chmod 755 "/usr/local/bin/symfony"
+sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.2/symfony_linux_386 -o /usr/local/bin/symfony
+sudo chmod 755 "/usr/local/bin/symfony"
 symfony -V
