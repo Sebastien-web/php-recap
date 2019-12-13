@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # CURL
 apt update
 apt install curl -y
