@@ -34,7 +34,7 @@ npm -v
 
 # Yarn
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
-source ~/.profile
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 yarn -v
 
 # Symfony CLI
