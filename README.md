@@ -130,7 +130,7 @@ Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_opca
 
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
-## MySQL 8.0 installation
+## MariaDB 10.4 installation
 
 ![mysql](https://user-images.githubusercontent.com/6952638/70372312-a0a18380-18dd-11ea-90df-b25acc5f1684.jpg)
 
@@ -162,8 +162,7 @@ The root password will be set to "root" after this installation.
 
 *On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
 ```
-choco install mysql --version 8.0.18 -y
-mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
+choco install mariadb --version 10.4.8 -y
 ```
 
 The root password will be empty after this installation.
