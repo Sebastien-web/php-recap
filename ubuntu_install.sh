@@ -33,11 +33,11 @@ apt install php7.2-mbstring php7.2-mysql php7.2-xml php7.2-curl php-xdebug -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php/7.2/apache2/php.ini
+sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.2/apache2/php.ini
+sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r "echo php_ini_loaded_file();")
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
