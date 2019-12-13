@@ -241,6 +241,6 @@ sudo chmod 755 "/usr/local/bin/symfony"
 ```
 New-Item -ItemType Directory -Force -Path C:\tools
 New-Item -ItemType Directory -Force -Path C:\tools\symfony
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iwr -outf C:\tools\symfony\symfony.exe https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe", "C:\tools\symfony\symfony.exe");
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
 ```
