@@ -3,7 +3,7 @@
 # CURL
 sudo apt update
 sudo apt install curl -y
-curl -v
+curl --version
 
 # Git
 sudo apt install git -y
@@ -47,6 +47,8 @@ npm -v
 
 # Yarn
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+source ~/.profile
+yarn -v
 
 # Symfony CLI
 sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.2/symfony_linux_386 -o /usr/local/bin/symfony
