@@ -50,4 +50,4 @@ New-Item -ItemType Directory -Force -Path C:\tools\symfony
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iwr -outf C:\tools\symfony\symfony.exe https://github.com/symfony/cli/releases/download/v4.11.2/symfony_windows_386.exe
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-symfony
+symfony -V
