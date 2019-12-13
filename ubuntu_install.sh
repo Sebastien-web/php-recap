@@ -1,40 +1,27 @@
 #!/bin/bash
 
 # CURL
-apt update
-apt install curl -y
+sudo apt update
+sudo apt install curl -y
 curl --version
 
 # Git
-apt install git -y
+sudo apt install git -y
 git --version
 
 # PHP
-add-apt-repository ppa:ondrej/php -y
-apt update
-apt install php7.3 -y
-apt install php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php-xdebug -y
-sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php/7.3/apache2/php.ini
-sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.3/apache2/php.ini
+sudo apt install php7.2 -y
+sudo apt install php7.2-mbstring php7.2-mysql php7.2-xml php7.2-curl php-xdebug -y
+sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php/7.2/apache2/php.ini
+sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.2/apache2/php.ini
 php -v
 
 # Mysql
-export DEBIAN_FRONTEND="noninteractive";
-curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
-dpkg -i mysql-apt-config*
-sudo apt update
-rm mysql-apt-config*
-debconf-set-selections <<< 'mysql-community-server mysql-community-server/root-pass password root'
-debconf-set-selections <<< 'mysql-community-server mysql-community-server/re-root-pass password root' 
-apt install mysql-server -y
-mysql -u root -proot -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
-mysql -u root -proot -e "SELECT version()";
+sudo apt install mariadb-server=1:10.1.43-0ubuntu0.18.04.1 -y
+sudo mysql -e "SELECT version();"
 
 # Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --version 1.9.1
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
+sudo apt install composer=1.6.3-1 -y
 composer -v
 
 # NodeJS
@@ -47,7 +34,7 @@ npm -v
 
 # Yarn
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
-source ~/.profile
+source ~/.bashrc
 yarn -v
 
 # Symfony CLI
