@@ -24,7 +24,7 @@ On Ubuntu, CURL is needed in order to install some packages with the default pac
 
 ```bash
 sudo apt update
-sudo apt install curl -y
+sudo apt install curl=7.58.0-2ubuntu3.8 -y
 ```
 
 ### MacOS 10.14
@@ -87,10 +87,8 @@ choco install git -y
 ### Ubuntu 18.04
 
 ```
-sudo add-apt-repository ppa:ondrej/php -y
-sudo apt update
-sudo apt install php7.3 -y
-sudo apt install php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php-xdebug -y
+sudo apt install php7.2
+sudo apt install php7.2-mbstring php7.2-mysql php7.2-xml php7.2-curl php-xdebug -y
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php/7.3/apache2/php.ini
 sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php/7.3/apache2/php.ini
 ```
@@ -102,7 +100,7 @@ sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /etc/php
 ### MacOS 10.14
 
 ```
-brew install php@7.3
+brew install php@7.2
 sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' /usr/local/etc/php/7.3/php.ini
 sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /usr/local/etc/php/7.3/php.ini
 ```
@@ -114,58 +112,43 @@ sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /usr/local/et
 ### Windows 10
 
 ```
-choco install php --version 7.3.12 -y
-iwr -outf C:\tools\php73\ext\php_xdebug.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
-Add-Content c:\tools\php73\php.ini "extension_dir = ext"
-Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_xdebug.dll"
-Add-Content c:\tools\php73\php.ini "zend_extension = C:\tools\php73\ext\php_opcache.dll"
-((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=mbstring','extension=mbstring') | Set-Content -Path C:\tools\php73\php.ini
-((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=openssl','extension=openssl') | Set-Content -Path C:\tools\php73\php.ini
-((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=curl','extension=curl') | Set-Content -Path C:\tools\php73\php.ini
-((Get-Content -path C:\tools\php73\php.ini -Raw) -replace ';extension=pdo_mysql','extension=pdo_mysql') | Set-Content -Path C:\tools\php73\php.ini
-((Get-Content -path C:\tools\php73\php.ini -Raw) -replace 'post_max_size = 8M','post_max_size = 64M') | Set-Content -Path C:\tools\php73\php.ini
-((Get-Content -path C:\tools\php73\php.ini -Raw) -replace 'upload_max_filesize = 2M','upload_max_filesize = 64M') | Set-Content -Path C:\tools\php73\php.ini
+choco install php --version 7.2.25 -y
+iwr -outf C:\tools\php72\ext\php_xdebug.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
+Add-Content c:\tools\php72\php.ini "extension_dir = ext"
+Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_xdebug.dll"
+Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opcache.dll"
+((Get-Content -path C:\tools\php72\php.ini -Raw) -replace ';extension=mbstring','extension=mbstring') | Set-Content -Path C:\tools\php72\php.ini
+((Get-Content -path C:\tools\php72\php.ini -Raw) -replace ';extension=openssl','extension=openssl') | Set-Content -Path C:\tools\php72\php.ini
+((Get-Content -path C:\tools\php72\php.ini -Raw) -replace ';extension=curl','extension=curl') | Set-Content -Path C:\tools\php72\php.ini
+((Get-Content -path C:\tools\php72\php.ini -Raw) -replace ';extension=pdo_mysql','extension=pdo_mysql') | Set-Content -Path C:\tools\php72\php.ini
+((Get-Content -path C:\tools\php72\php.ini -Raw) -replace 'post_max_size = 8M','post_max_size = 64M') | Set-Content -Path C:\tools\php72\php.ini
+((Get-Content -path C:\tools\php72\php.ini -Raw) -replace 'upload_max_filesize = 2M','upload_max_filesize = 64M') | Set-Content -Path C:\tools\php72\php.ini
 ```
 **[Installed PHP Modules]** bcmath, calendar, Core, ctype, curl, date, dom, filter, hash, iconv, json, libxml, mbstring, mysqlnd, openssl, pcre, PDO, pdo_mysql, Phar, readline, Reflection, session, SimpleXML, SPL, standard, tokenizer, wddx, xdebug, xml, xmlreader, xmlwriter, Zend OPcache, zip, zlib
 
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
-## MariaDB 10.4 installation
+## MariaDB 10.1 installation
 
 ![mysql](https://user-images.githubusercontent.com/6952638/70372312-a0a18380-18dd-11ea-90df-b25acc5f1684.jpg)
 
 ### Ubuntu 18.04
 
 ```
-export DEBIAN_FRONTEND="noninteractive";
-sudo curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
-sudo -E dpkg -i mysql-apt-config*
-sudo apt update
-sudo rm mysql-apt-config*
-sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/root-pass password root'
-sudo debconf-set-selections <<< 'mysql-community-server mysql-community-server/re-root-pass password root' 
-sudo -E apt install mysql-server -y
-mysql -u root -proot -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
+apt install mariadb-server=1:10.1.43-0ubuntu0.18.04.1 -y
 ```
-
-The root password will be set to "root" after this installation.
 
 ### MacOS 10.14
 
 ```
-brew install mysql@8.0
+brew install mariadb@10.1
 ```
-
-The root password will be set to "root" after this installation.
 
 ### Windows 10
 
-*On Windows, after each installation, you must start a new command prompt in order to use the installed packages.*
 ```
-choco install mariadb --version 10.4.8 -y
+choco install mariadb --version 10.1.21 -y
 ```
-
-The root password will be empty after this installation.
 
 ## Composer 1.9 installation
 
