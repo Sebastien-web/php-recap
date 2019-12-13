@@ -51,9 +51,13 @@ Open the PowerShell command prompt in administrator mode and type:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
-Then restart your PowerShell.
+Then restart your PowerShell or reload your $PATH with this command:
 
-**On Windows, after each installation, you must start a new PowerShell** in order to use the installed packages. All command listed here must only be used inside the PowerShell in **administrator mode** (not the default command prompt).
+```powershell
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+```
+
+**On Windows, after each installation, you must start a new PowerShell or reload your $PATH** in order to use the installed packages. All command listed here must only be used inside the PowerShell in **administrator mode** (not the default command prompt).
 
 ## Git installation
 
