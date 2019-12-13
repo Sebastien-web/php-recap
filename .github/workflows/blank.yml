@@ -1,0 +1,12 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Install ubuntu environment
+      run: sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | sudo bash
