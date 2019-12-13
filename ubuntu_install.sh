@@ -26,7 +26,7 @@ composer -v
 
 # NodeJS
 echo 'Downloading nodesource_setup.sh'
-curl -L https://deb.nodesource.com/setup_12.x | sudo bash
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 echo 'Installing node'
 sudo apt install nodejs -y
 node -v
