@@ -53,7 +53,7 @@ if [[ $? -ne 0 ]] ; then
     exit 1
 fi
 echo "start mysql"
-service start mysql
+service mysql start
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
