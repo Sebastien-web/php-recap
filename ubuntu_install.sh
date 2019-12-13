@@ -52,6 +52,8 @@ apt install mariadb-server-10.1 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
+systemctl status mariadb.service
+journalctl -xe
 echo "start mysql"
 service mysql start
 if [[ $? -ne 0 ]] ; then
