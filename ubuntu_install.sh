@@ -56,6 +56,7 @@ netstat -ln | grep mysqld
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
+echo "start mysql"
 service start mysql
 if [[ $? -ne 0 ]] ; then
     exit 1
