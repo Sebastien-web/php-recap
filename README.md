@@ -157,7 +157,7 @@ choco install mariadb --version 10.1.21 -y
 ### Ubuntu 18.04
 
 ```
-sudo apt install compposer=1.6.3-1 -y
+sudo apt install composer=1.6.3-1 -y
 ```
 
 ### MacOS 10.14
