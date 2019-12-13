@@ -26,14 +26,14 @@ composer -v
 
 # NodeJS
 echo 'Downloading nodesource_setup.sh'
-sudo wget -O- https://deb.nodesource.com/setup_12.x | bash
+curl -L https://deb.nodesource.com/setup_12.x | sudo bash
 echo 'Installing node'
 sudo apt install nodejs -y
 node -v
 npm -v
 
 # Yarn
-sudo curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
 source ~/.profile
 yarn -v
 
