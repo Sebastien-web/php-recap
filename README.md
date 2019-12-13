@@ -3,7 +3,7 @@
 ### Ubuntu 18.04
 
 ```bash
-wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | bash
+sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | bash
 ```
 
 ### Windows 10
