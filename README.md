@@ -135,7 +135,7 @@ Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opca
 ### Ubuntu 18.04
 
 ```
-apt install mariadb-server=1:10.1.43-0ubuntu0.18.04.1 -y
+sudo apt install mariadb-server-10.1 -y
 ```
 
 ### MacOS 10.14
@@ -177,9 +177,7 @@ choco install composer --version 5.0.0 -y
 ### Ubuntu 18.04
 
 ```
-curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
-sudo rm nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs -y
 ```
 
@@ -203,6 +201,12 @@ choco install nodejs --version 12.13.1 -y
 
 ```
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+```
+
+Then, run the following command to reload your $PATH in order to use yarn immediately:
+
+```
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ```
 
 ### MacOS 10.14
