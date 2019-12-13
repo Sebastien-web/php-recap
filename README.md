@@ -157,16 +157,13 @@ choco install mariadb --version 10.1.21 -y
 ### Ubuntu 18.04
 
 ```
-sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-sudo php composer-setup.php --version 1.9.1
-sudo php -r "unlink('composer-setup.php');"
-sudo mv composer.phar /usr/local/bin/composer
+sudo apt install compposer=1.6.3-1 -y
 ```
 
 ### MacOS 10.14
 
 ```
-brew install composer@1.9.1
+brew install composer@1.6
 ```
 
 ### Windows 10
