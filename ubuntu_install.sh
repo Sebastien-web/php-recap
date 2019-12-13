@@ -28,7 +28,7 @@ composer -v
 echo 'Downloading nodesource_setup.sh'
 curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 echo 'Exec nodesource_setup.sh'
-bash nodesource_setup.sh
+sudo bash nodesource_setup.sh
 echo 'Removing nodesource_setup.sh'
 rm nodesource_setup.sh
 echo 'Installing nodesource_setup.sh'
