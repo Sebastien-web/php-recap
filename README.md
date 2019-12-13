@@ -24,7 +24,7 @@ On Ubuntu, CURL is needed in order to install some packages with the default pac
 
 ```bash
 sudo apt update
-sudo apt install curl=7.58.0-2ubuntu3.8 -y
+sudo apt install curl -y
 ```
 
 ### MacOS 10.14
