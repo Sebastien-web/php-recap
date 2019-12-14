@@ -52,17 +52,6 @@ apt install mariadb-server-10.1 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-systemctl status mariadb.service
-journalctl -xe
-echo "start mysql"
-service mysql start
-if [[ $? -ne 0 ]] ; then
-    exit 1
-fi
-mysql -e "SELECT version();"
-if [[ $? -ne 0 ]] ; then
-    exit 1
-fi
 
 # Composer
 apt install composer=1.6.3-1 -y
