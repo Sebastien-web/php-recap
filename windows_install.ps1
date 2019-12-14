@@ -1,6 +1,5 @@
 # Chocolatey
 # Set-ExecutionPolicy Bypass -Scope Process -Force; iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
-Set-ExecutionPolicy AllSigned -Scope Process -Force; iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 iwr -outf C:\choco.ps1 https://chocolatey.org/install.ps1
 & C:\choco.ps1
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
