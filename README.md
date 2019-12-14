@@ -148,7 +148,14 @@ brew install composer
 ### Windows 10
 
 ```
-choco install composer --version=4.10.0 -y
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+New-Item -ItemType Directory -Force -Path C:\tools
+New-Item -ItemType Directory -Force -Path C:\tools\composer
+php composer-setup.php --version=1.9.1 --install-dir=C:\tools\composer
+New-Item -ItemType File -Path C:\tools\composer\composer.bat
+Add-Content C:\tools\composer\composer.bat "@php %~dp0composer.phar"
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
+php -r "unlink('composer-setup.php');"
 ```
 
 ## MariaDB 10.1 installation
@@ -201,7 +208,7 @@ choco install nodejs --version=12.13.1 -y
 ### Ubuntu 18.04
 
 ```
-curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
 ```
 
 Then, run the following command to reload your $PATH in order to use yarn immediately:
@@ -219,7 +226,7 @@ brew install yarn --ignore-dependencies
 ### Windows 10
 
 ```
-choco install yarn --version=1.19.2 -y
+choco install yarn --version=1.21.1 -y
 ```
 
 ## Symfony CLI 4.11 installation
