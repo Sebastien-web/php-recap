@@ -3,14 +3,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Git
-choco install git -y
+choco install git --version=2.24.1.2 -y
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 git --version
-
-# Composer
-choco install composer -y
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-composer -V
 
 # PHP
 choco install php --version=7.2.25 -y
@@ -27,8 +22,13 @@ Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opca
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 php -v
 
+# Composer
+choco install composer --version=4.10.0 -y
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+composer -V
+
 # MySQL
-choco install mariadb --version=10.1.21 -y
+choco install mariadb --version=10.4.8 -y
 
 # NodeJS
 choco install nodejs --version=12.13.1 -y
@@ -37,7 +37,7 @@ node -v
 npm -v
 
 # Yarn
-choco install yarn --version=1.19.2 -y
+choco install yarn --version=1.21.1 -y
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 yarn -v
 
