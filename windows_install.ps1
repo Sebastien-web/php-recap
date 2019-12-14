@@ -9,7 +9,7 @@ git --version
 
 # PHP
 choco install php --version=7.2.25 -y
-(New-Object System.Net.WebClient).DownloadFile("http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll", "C:\tools\php72\ext\php_xdebug.dll");
+iwr -outf C:\tools\php72\ext\php_xdebug.dll http://xdebug.org/files/php_xdebug-2.9.0-7.2-vc15-nts-x86_64.dll
 Add-Content c:\tools\php72\php.ini "extension_dir = ext"
 Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_xdebug.dll"
 Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opcache.dll"
