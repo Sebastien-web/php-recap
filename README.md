@@ -164,13 +164,13 @@ sudo apt install mariadb-server-10.1 -y
 ### MacOS 10.14
 
 ```
-brew install mariadb@10.1
+brew install mariadb@10.4
 ```
 
 ### Windows 10
 
 ```
-choco install mariadb --version=10.3.6 -y
+choco install mariadb --version=10.4.8 -y
 ```
 
 ## NodeJS 12 installation
