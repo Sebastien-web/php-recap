@@ -134,7 +134,7 @@ sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' /usr/local/et
 ### Windows 10
 
 ```
-choco install php --version 7.2.25 -y
+choco install php --version=7.2.25 -y
 iwr -outf C:\tools\php72\ext\php_xdebug.dll http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll
 Add-Content c:\tools\php72\php.ini "extension_dir = ext"
 Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_xdebug.dll"
@@ -169,7 +169,7 @@ brew install mariadb@10.1
 ### Windows 10
 
 ```
-choco install mariadb --version 10.1.21 -y
+choco install mariadb --version=10.1.21 -y
 ```
 
 ## NodeJS 12 installation
@@ -190,7 +190,7 @@ brew install node@12
 ### Windows 10
 
 ```
-choco install nodejs --version 12.13.1 -y
+choco install nodejs --version=12.13.1 -y
 ```
 
 ## Yarn 1.19 installation
@@ -218,7 +218,7 @@ brew install yarn --ignore-dependencies
 ### Windows 10
 
 ```
-choco install yarn --version 1.19.2 -y
+choco install yarn --version=1.19.2 -y
 ```
 
 ## Symfony CLI 4.11 installation
