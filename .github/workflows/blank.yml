@@ -3,10 +3,15 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  install_ubuntu:
 
     runs-on: ubuntu-18.04
 
     steps:
-    - name: Install ubuntu environment
-      run: sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | sudo bash
+      - name: Install ubuntu environment
+        run: sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | sudo bash
+  install_windows:
+    runs-on: windows-latest
+    steps:
+      - name: Install Windows environment
+        run: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
