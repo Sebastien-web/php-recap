@@ -80,7 +80,29 @@ brew link --overwrite git
 choco install git -y
 ```
 
-## PHP 7.3 installation
+## Composer 1.9 installation
+
+![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
+
+### Ubuntu 18.04
+
+```
+sudo apt install composer -y
+```
+
+### MacOS 10.14
+
+```
+brew install composer
+```
+
+### Windows 10
+
+```
+choco install composer -y
+```
+
+## PHP 7.2 installation
 
 ![php](https://user-images.githubusercontent.com/6952638/70372327-bca52500-18dd-11ea-8638-7cdab7c5d6e0.png)
 
@@ -148,28 +170,6 @@ brew install mariadb@10.1
 
 ```
 choco install mariadb --version 10.1.21 -y
-```
-
-## Composer 1.9 installation
-
-![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
-
-### Ubuntu 18.04
-
-```
-sudo apt install composer=1.6.3-1 -y
-```
-
-### MacOS 10.14
-
-```
-brew install composer@1.6
-```
-
-### Windows 10
-
-```
-choco install composer --version 5.0.0 -y
 ```
 
 ## NodeJS 12 installation
