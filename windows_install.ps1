@@ -13,7 +13,7 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 composer -V
 
 # PHP
-choco install php --version 7.2.25 -y
+choco install php --version=7.2.25 -y
 (New-Object System.Net.WebClient).DownloadFile("http://xdebug.org/files/php_xdebug-2.8.1-7.3-vc15-nts-x86_64.dll", "C:\tools\php72\ext\php_xdebug.dll ");
 Add-Content c:\tools\php72\php.ini "extension_dir = ext"
 Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_xdebug.dll"
@@ -28,16 +28,16 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 php -v
 
 # MySQL
-choco install mariadb --version 10.1.21 -y
+choco install mariadb --version=10.1.21 -y
 
 # NodeJS
-choco install nodejs --version 12.13.1 -y
+choco install nodejs --version=12.13.1 -y
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 node -v
 npm -v
 
 # Yarn
-choco install yarn --version 1.19.2 -y
+choco install yarn --version=1.19.2 -y
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 yarn -v
 
