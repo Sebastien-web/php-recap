@@ -77,29 +77,7 @@ brew link --overwrite git
 ### Windows 10
 
 ```
-choco install git -y
-```
-
-## Composer 1.9 installation
-
-![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
-
-### Ubuntu 18.04
-
-```
-sudo apt install composer -y
-```
-
-### MacOS 10.14
-
-```
-brew install composer
-```
-
-### Windows 10
-
-```
-choco install composer -y
+choco install git --version=2.24.1.2 -y
 ```
 
 ## PHP 7.2 installation
@@ -150,6 +128,29 @@ Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opca
 
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
+
+## Composer installation
+
+![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
+
+### Ubuntu 18.04
+
+```
+sudo apt install composer -y
+```
+
+### MacOS 10.14
+
+```
+brew install composer
+```
+
+### Windows 10
+
+```
+choco install composer --version=4.10.0 -y
+```
+
 ## MariaDB 10.1 installation
 
 ![mysql](https://user-images.githubusercontent.com/6952638/70372312-a0a18380-18dd-11ea-90df-b25acc5f1684.jpg)
@@ -169,7 +170,7 @@ brew install mariadb@10.1
 ### Windows 10
 
 ```
-choco install mariadb --version=10.1.21 -y
+choco install mariadb --version=10.3.6 -y
 ```
 
 ## NodeJS 12 installation
