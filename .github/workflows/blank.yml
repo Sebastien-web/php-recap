@@ -14,4 +14,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Install Windows environment
-        run: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
+        run: iwr -outf C:\install.ps1 https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1; & C:\install.ps1
