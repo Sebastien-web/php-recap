@@ -9,7 +9,8 @@ sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ub
 ### Windows 10
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
+iwr -outf C:\install.ps1 https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1; & C:\install.ps1
+# Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
 ```
 
 # Manual installation
