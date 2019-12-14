@@ -22,8 +22,15 @@ Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opca
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 php -v
 
-# Composer
-choco install composer --version=4.10.0 -y
+# Composer 1.9
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+New-Item -ItemType Directory -Force -Path C:\tools
+New-Item -ItemType Directory -Force -Path C:\tools\composer
+php composer-setup.php --version=1.9.1 --install-dir=C:\tools\composer
+New-Item -ItemType File -Path C:\tools\composer\composer.bat
+Add-Content C:\tools\composer\composer.bat "@php %~dp0composer.phar"
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\composer", "Machine")
+php -r "unlink('composer-setup.php');"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 composer -V
 
