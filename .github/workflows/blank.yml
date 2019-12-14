@@ -3,13 +3,13 @@ name: CI
 on: [push]
 
 jobs:
-  install_ubuntu:
+  #install_ubuntu:
 
-    runs-on: ubuntu-18.04
+    #runs-on: ubuntu-18.04
 
-    steps:
-      - name: Install ubuntu environment
-        run: sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | sudo bash
+   # steps:
+     # - name: Install ubuntu environment
+     #   run: sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | sudo bash
   install_windows:
     runs-on: windows
     steps:
