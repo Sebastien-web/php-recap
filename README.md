@@ -264,17 +264,15 @@ choco install yarn --version=1.21.1 -y
 ### Ubuntu 18.04
 
 ```
-arch=$([ $(uname -p) == "i386" ] && echo "386" || echo "amd64")
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_linux_${arch} -o /usr/local/bin/symfony
-sudo chmod 755 "/usr/local/bin/symfony"
+curl -sS https://get.symfony.com/cli/installer | bash
+mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 ```
 
 ### MacOS 10.15
 
 ```
-arch=$([ $(uname -p) == "i386" ] && echo "386" || echo "amd64")
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_${arch} -o /usr/local/bin/symfony
-sudo chmod 755 "/usr/local/bin/symfony"
+curl -sS https://get.symfony.com/cli/installer | bash
+mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 ```
 
 ### Windows 10
