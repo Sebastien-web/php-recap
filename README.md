@@ -85,6 +85,32 @@ brew install git
 choco install git -y
 ```
 
+## Symfony CLI 4.11 installation
+
+### Ubuntu 18.04
+
+```
+curl -sS https://get.symfony.com/cli/installer | bash
+mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+```
+
+### MacOS 10.15
+
+```
+curl -sS https://get.symfony.com/cli/installer | bash
+mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+```
+
+### Windows 10
+
+```
+New-Item -ItemType Directory -Force -Path C:\tools
+New-Item -ItemType Directory -Force -Path C:\tools\symfony
+IF ((Get-WmiObject -class Win32_Processor) -like '*Intel*'){$arch="386"} Else {$arch="amd64"}
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.3/symfony_windows_$arch.exe", "C:\tools\symfony\symfony.exe");
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
+```
+
 ## PHP 7.2 installation
 
 ![php](https://user-images.githubusercontent.com/6952638/70372327-bca52500-18dd-11ea-8638-7cdab7c5d6e0.png)
@@ -257,30 +283,4 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ```
 choco install yarn --version=1.21.1 -y
-```
-
-## Symfony CLI 4.11 installation
-
-### Ubuntu 18.04
-
-```
-curl -sS https://get.symfony.com/cli/installer | bash
-mv ~/.symfony/bin/symfony /usr/local/bin/symfony
-```
-
-### MacOS 10.15
-
-```
-curl -sS https://get.symfony.com/cli/installer | bash
-mv ~/.symfony/bin/symfony /usr/local/bin/symfony
-```
-
-### Windows 10
-
-```
-New-Item -ItemType Directory -Force -Path C:\tools
-New-Item -ItemType Directory -Force -Path C:\tools\symfony
-IF ((Get-WmiObject -class Win32_Processor) -like '*Intel*'){$arch="386"} Else {$arch="amd64"}
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.3/symfony_windows_$arch.exe", "C:\tools\symfony\symfony.exe");
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
 ```
