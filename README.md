@@ -137,17 +137,19 @@ Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opca
 ### Ubuntu 18.04
 
 ```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
-php -r "unlink('composer-setup.php');"
+sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
+sudo php -r "unlink('composer-setup.php');"
+sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer
 ```
 
 ### MacOS 10.14
 
 ```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
-php -r "unlink('composer-setup.php');"
+sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
+sudo php -r "unlink('composer-setup.php');"
+sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer
 ```
 
 ### Windows 10
