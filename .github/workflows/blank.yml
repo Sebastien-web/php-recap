@@ -3,22 +3,13 @@ name: CI
 on: [push]
 
 jobs:
-   install_ubuntu:
- 
+  install_ubuntu:
     runs-on: ubuntu-18.04
-
     steps:
       - name: Install Ubuntu environment
         run: wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu18.04_install.sh | bash
-  #install_windows:
-  #  runs-on: windows-latest
-  #  steps:
-  #    - name: Install Windows environment
-  #      run: iwr -outf C:\install.ps1 https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1; & C:\install.ps1
   install_macos:
-
-    runs-on: macos
-
+    runs-on: macos-latest
     steps:
       - name: Install Mac OS environment
         run: curl -L https://raw.githubusercontent.com/RomainFallet/php-recap/master/macos10.15_install.sh | bash
