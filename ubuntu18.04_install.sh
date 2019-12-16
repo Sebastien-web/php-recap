@@ -24,6 +24,20 @@ if [[ $? -ne 0 ]] ; then
     exit 1
 fi
 
+# Symfony CLI
+curl -sS https://get.symfony.com/cli/installer | bash
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+symfony -V
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+
 # PHP
 apt install php7.2 -y
 if [[ $? -ne 0 ]] ; then
@@ -111,20 +125,6 @@ if [[ $? -ne 0 ]] ; then
     exit 1
 fi
 yarn -v
-if [[ $? -ne 0 ]] ; then
-    exit 1
-fi
-
-# Symfony CLI
-curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_linux_386 -o /usr/local/bin/symfony
-if [[ $? -ne 0 ]] ; then
-    exit 1
-fi
-chmod 755 "/usr/local/bin/symfony"
-if [[ $? -ne 0 ]] ; then
-    exit 1
-fi
-symfony -V
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
