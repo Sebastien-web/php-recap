@@ -72,13 +72,12 @@ sudo apt install git -y
 
 ```
 brew install git
-brew link --overwrite git
 ```
 
 ### Windows 10
 
 ```
-choco install git --version=2.24.1.2 -y
+choco install git -y
 ```
 
 ## PHP 7.2 installation
@@ -130,20 +129,24 @@ Add-Content c:\tools\php72\php.ini "zend_extension = C:\tools\php72\ext\php_opca
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
 
-## Composer installation
+## Composer 1.9 installation
 
 ![composer](https://user-images.githubusercontent.com/6952638/70372308-a008ed00-18dd-11ea-9ee0-61d017dfa488.png)
 
 ### Ubuntu 18.04
 
 ```
-sudo apt install composer -y
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
+php -r "unlink('composer-setup.php');"
 ```
 
 ### MacOS 10.14
 
 ```
-brew install composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
+php -r "unlink('composer-setup.php');"
 ```
 
 ### Windows 10
@@ -159,14 +162,16 @@ Add-Content C:\tools\composer\composer.bat "@php %~dp0composer.phar"
 php -r "unlink('composer-setup.php');"
 ```
 
-## MariaDB 10.1 installation
+## MariaDB 10.4 installation
 
 ![mysql](https://user-images.githubusercontent.com/6952638/70372312-a0a18380-18dd-11ea-90df-b25acc5f1684.jpg)
 
 ### Ubuntu 18.04
 
 ```
-sudo apt install mariadb-server-10.1 -y
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"
+sudo apt install mariadb-server-10.4 -y
 ```
 
 ### MacOS 10.14
@@ -202,7 +207,7 @@ brew install node@12
 choco install nodejs --version=12.13.1 -y
 ```
 
-## Yarn 1.19 installation
+## Yarn 1.21 installation
 
 ![yarn](https://user-images.githubusercontent.com/6952638/70372314-a13a1a00-18dd-11ea-9cdb-7b976c2beab8.png)
 
@@ -221,7 +226,14 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ### MacOS 10.14
 
 ```
-brew install yarn --ignore-dependencies
+touch ~/.bash_profile
+curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
+```
+
+Then, run the following command to reload your $PATH in order to use yarn immediately:
+
+```
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ```
 
 ### Windows 10
@@ -235,14 +247,14 @@ choco install yarn --version=1.21.1 -y
 ### Ubuntu 18.04
 
 ```
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.2/symfony_linux_386 -o /usr/local/bin/symfony
+sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_linux_386 -o /usr/local/bin/symfony
 sudo chmod 755 "/usr/local/bin/symfony"
 ```
 
 ### MacOS 10.14
 
 ```
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.2/symfony_darwin_386 -o /usr/local/bin/symfony
+sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_386 -o /usr/local/bin/symfony
 sudo chmod 755 "/usr/local/bin/symfony"
 ```
 
