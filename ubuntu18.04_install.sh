@@ -64,7 +64,7 @@ mv /usr/local/bin/composer.phar /usr/local/bin/composer
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-composer -v
+composer -V
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
