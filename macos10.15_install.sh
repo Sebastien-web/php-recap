@@ -11,7 +11,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Git
-brew install git
+brew install git || brew upgrade git
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
