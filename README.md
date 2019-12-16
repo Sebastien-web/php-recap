@@ -214,6 +214,7 @@ sudo apt install mariadb-server-10.4 -y
 
 ```
 brew install mariadb@10.4
+brew services start mariadb
 ```
 
 ### Windows 10
