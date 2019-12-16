@@ -9,7 +9,7 @@ wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu1
 ### Windows 10
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows10_install.ps1'))
 ```
 
 ### MacOS 10.15
