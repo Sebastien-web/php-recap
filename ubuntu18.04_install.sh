@@ -47,18 +47,38 @@ if [[ $? -ne 0 ]] ; then
     exit 1
 fi
 
-# Mysql
-apt install mariadb-server-10.1 -y
+# Composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-
-# Composer
-apt install composer=1.6.3-1 -y
+php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+php -r "unlink('composer-setup.php');"
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+mv /usr/local/bin/composer.phar /usr/local/bin/composer
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
 composer -v
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+
+# Mysql
+apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+apt install mariadb-server-10.4 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -68,7 +88,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-apt install nodejs -y
+apt install nodejs=12.13.1-1nodesource1 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -82,7 +102,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Yarn
-curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.2
+curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -96,7 +116,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Symfony CLI
-curl -L https://github.com/symfony/cli/releases/download/v4.11.2/symfony_linux_386 -o /usr/local/bin/symfony
+curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_linux_386 -o /usr/local/bin/symfony
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
