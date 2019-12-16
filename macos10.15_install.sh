@@ -107,7 +107,8 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Symfony CLI
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_386 -o /usr/local/bin/symfony
+arch=$([ $(uname -p) == "i386" ] && echo "386" || echo "amd64")
+sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_${arch} -o /usr/local/bin/symfony
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
