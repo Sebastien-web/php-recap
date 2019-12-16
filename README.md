@@ -209,6 +209,13 @@ sudo apt install nodejs=12.13.1-1nodesource1 -y
 
 ```
 brew install node@12
+echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.bash_profile
+```
+
+Then, run the following command to reload your $PATH in order to use node immediately:
+
+```
+export PATH="/usr/local/opt/node@12/bin:$PATH"
 ```
 
 ### Windows 10
