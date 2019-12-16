@@ -111,6 +111,10 @@ curl -sS https://get.symfony.com/cli/installer | bash
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
+mv /Users/runner/.symfony/bin/symfony /usr/local/bin/symfony
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
 symfony -V
 if [[ $? -ne 0 ]] ; then
     exit 1
