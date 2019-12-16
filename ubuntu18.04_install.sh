@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # CURL
-apt update
+sudo apt update
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-apt install curl -y
+sudo apt install curl -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -15,7 +15,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Git
-apt install git -y
+sudo apt install git -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -29,7 +29,7 @@ curl -sS https://get.symfony.com/cli/installer | bash
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+sudo mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -39,23 +39,23 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # PHP
-apt install php7.2 -y
+sudo apt install php7.2 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-apt install php7.2-mbstring php7.2-mysql php7.2-xml php7.2-curl php-xdebug -y
+sudo apt install php7.2-mbstring php7.2-mysql php7.2-xml php7.2-curl php-xdebug -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
+sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r "echo php_ini_loaded_file();")
+sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r "echo php_ini_loaded_file();")
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-update-alternatives --set php /usr/bin/php7.2
+sudo update-alternatives --set php /usr/bin/php7.2
 php -v
 if [[ $? -ne 0 ]] ; then
     exit 1
@@ -66,7 +66,7 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
+sudo php composer-setup.php --version=1.9.1 --install-dir=/usr/local/bin/
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -74,7 +74,7 @@ php -r "unlink('composer-setup.php');"
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-mv /usr/local/bin/composer.phar /usr/local/bin/composer
+sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -84,15 +84,15 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Mysql
-apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"
+sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-apt install mariadb-server-10.4 -y
+sudo apt install mariadb-server-10.4 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -102,7 +102,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-apt install nodejs=12.13.1-1nodesource1 -y
+sudo apt install nodejs=12.13.1-1nodesource1 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
