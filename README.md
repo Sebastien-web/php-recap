@@ -3,14 +3,19 @@
 ### Ubuntu 18.04
 
 ```bash
-sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu_install.sh | sudo bash
+sudo wget -O- https://raw.githubusercontent.com/RomainFallet/php-recap/master/ubuntu18.04_install.sh | sudo bash
 ```
 
 ### Windows 10
 
 ```powershell
-iwr -outf C:\install.ps1 https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1; & C:\install.ps1
-# Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/RomainFallet/php-recap/master/windows_install.ps1'))
+```
+
+### MacOS 10.15
+
+```bash
+sudo curl -L https://raw.githubusercontent.com/RomainFallet/php-recap/master/macos10.15_install.sh | sudo bash
 ```
 
 # Manual installation
@@ -28,7 +33,7 @@ sudo apt update
 sudo apt install curl -y
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ![homebrew](https://user-images.githubusercontent.com/6952638/70372309-a0a18380-18dd-11ea-8280-e86e84f51043.png)
 
@@ -68,7 +73,7 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 sudo apt install git -y
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 brew install git
@@ -98,7 +103,7 @@ sudo update-alternatives --set php /usr/bin/php7.2
 
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 brew install php@7.2
@@ -143,7 +148,7 @@ sudo php -r "unlink('composer-setup.php');"
 sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -177,7 +182,7 @@ sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.li
 sudo apt install mariadb-server-10.4 -y
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 brew install mariadb@10.4
@@ -198,7 +203,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs=12.13.1-1nodesource1 -y
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 brew install node@12
@@ -226,7 +231,7 @@ Then, run the following command to reload your $PATH in order to use yarn immedi
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 touch ~/.bash_profile
@@ -254,7 +259,7 @@ sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_li
 sudo chmod 755 "/usr/local/bin/symfony"
 ```
 
-### MacOS 10.14
+### MacOS 10.15
 
 ```
 sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_386 -o /usr/local/bin/symfony
