@@ -25,6 +25,14 @@ brew install php@7.2
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
+echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.bash_profile
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
 if [[ $? -ne 0 ]] ; then
     exit 1
