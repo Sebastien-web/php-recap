@@ -257,14 +257,16 @@ choco install yarn --version=1.21.1 -y
 ### Ubuntu 18.04
 
 ```
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_linux_386 -o /usr/local/bin/symfony
+arch=$([ $(uname -p) == "i386" ] && echo "386" || echo "amd64")
+sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_linux_${arch} -o /usr/local/bin/symfony
 sudo chmod 755 "/usr/local/bin/symfony"
 ```
 
 ### MacOS 10.15
 
 ```
-sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_386 -o /usr/local/bin/symfony
+arch=$([ $(uname -p) == "i386" ] && echo "386" || echo "amd64")
+sudo curl -L https://github.com/symfony/cli/releases/download/v4.11.3/symfony_darwin_${arch} -o /usr/local/bin/symfony
 sudo chmod 755 "/usr/local/bin/symfony"
 ```
 
@@ -273,6 +275,7 @@ sudo chmod 755 "/usr/local/bin/symfony"
 ```
 New-Item -ItemType Directory -Force -Path C:\tools
 New-Item -ItemType Directory -Force -Path C:\tools\symfony
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.3/symfony_windows_386.exe", "C:\tools\symfony\symfony.exe");
+IF ((Get-WmiObject -class Win32_Processor) -like '*Intel*'){$arch="386"} Else {$arch="amd64"}
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.3/symfony_windows_$arch.exe", "C:\tools\symfony\symfony.exe");
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
 ```
