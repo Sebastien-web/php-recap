@@ -15,7 +15,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ### MacOS 10.15
 
 ```bash
-sudo curl -L https://raw.githubusercontent.com/RomainFallet/php-recap/master/macos10.15_install.sh | sudo bash
+curl -L https://raw.githubusercontent.com/RomainFallet/php-recap/master/macos10.15_install.sh | sudo
 ```
 
 # Manual installation
