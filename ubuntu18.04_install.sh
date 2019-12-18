@@ -95,7 +95,7 @@ if [[ $? -ne 0 ]] ; then
     exit 1
 fi
 
-# Mysql
+# MariaDB
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 if [[ $? -ne 0 ]] ; then
     exit 1
