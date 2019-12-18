@@ -8,6 +8,13 @@ choco install git --version=2.24.1.2 -y
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 git --version
 
+# Symfony CLI
+New-Item -ItemType Directory -Force -Path C:\tools
+New-Item -ItemType Directory -Force -Path C:\tools\symfony
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/latest/download/symfony_windows_$arch.exe", "C:\tools\symfony\symfony.exe");[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+symfony -V
+
 # PHP
 choco install php --version=7.3.12 -y
 iwr -outf C:\tools\php73\ext\php_xdebug.dll http://xdebug.org/files/php_xdebug-2.9.0-7.3-vc15-nts-x86_64.dll
@@ -48,11 +55,3 @@ npm -v
 choco install yarn --version=1.21.1 -y
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 yarn -v
-
-# Symfony CLI
-New-Item -ItemType Directory -Force -Path C:\tools
-New-Item -ItemType Directory -Force -Path C:\tools\symfony
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.3/symfony_windows_386.exe", "C:\tools\symfony\symfony.exe");
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-symfony -V
