@@ -39,6 +39,14 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # PHP
+sudo add-apt-repository ppa:ondrej/php
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
+sudo apt update
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
 sudo apt install php7.3 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
