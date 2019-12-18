@@ -133,7 +133,7 @@ sudo update-alternatives --set php /usr/bin/php7.3
 
 ```
 brew install php@7.3
-echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.bash_profile
 export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
 sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r "echo php_ini_loaded_file();")
