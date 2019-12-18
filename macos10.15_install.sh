@@ -35,15 +35,15 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # PHP
-brew install php@7.2
+brew install php@7.3
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.bash_profile
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
