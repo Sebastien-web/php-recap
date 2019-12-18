@@ -39,11 +39,11 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # PHP
-sudo apt install php7.2 -y
+sudo apt install php7.3 -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sudo apt install php7.2-mbstring php7.2-mysql php7.2-xml php7.2-curl php-xdebug -y
+sudo apt install php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php-xdebug -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -55,7 +55,7 @@ sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sudo update-alternatives --set php /usr/bin/php7.2
+sudo update-alternatives --set php /usr/bin/php7.3
 php -v
 if [[ $? -ne 0 ]] ; then
     exit 1
