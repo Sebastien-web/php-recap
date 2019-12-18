@@ -136,7 +136,7 @@ sudo update-alternatives --set php /usr/bin/php7.3
 
 ```
 brew install php@7.3
-echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.bash_profile
+brew link php@7.3 --force
 export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
 sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r "echo php_ini_loaded_file();")
@@ -219,6 +219,7 @@ sudo apt install mariadb-server-10.4 -y
 
 ```
 brew install mariadb@10.4
+brew link mariadb@10.4 --force
 brew services start mariadb
 ```
 
@@ -276,6 +277,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ```
 touch ~/.bash_profile
+touch ~/.zshrc
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
 ```
 
