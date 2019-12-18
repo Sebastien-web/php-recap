@@ -118,6 +118,8 @@ IF ((Get-WmiObject -class Win32_Processor) -like '*Intel*'){$arch="386"} Else {$
 ### Ubuntu 18.04
 
 ```
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
 sudo apt install php7.3 -y
 sudo apt install php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php-xdebug -y
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
