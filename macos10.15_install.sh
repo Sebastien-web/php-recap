@@ -39,7 +39,7 @@ brew install php@7.3
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.bash_profile
+brew link php@7.3 --force
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -91,6 +91,10 @@ brew install mariadb@10.4
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
+brew link mariadb@10.4 --force
+if [[ $? -ne 0 ]] ; then
+    exit 1
+fi
 
 # NodeJS
 brew install node@12
@@ -108,6 +112,7 @@ fi
 
 # Yarn
 sudo touch ~/.bash_profile
+touch ~/.zshrc
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
