@@ -107,7 +107,7 @@ mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 New-Item -ItemType Directory -Force -Path C:\tools
 New-Item -ItemType Directory -Force -Path C:\tools\symfony
 IF ((Get-WmiObject -class Win32_Processor) -like '*Intel*'){$arch="386"} Else {$arch="amd64"}
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/download/v4.11.3/symfony_windows_$arch.exe", "C:\tools\symfony\symfony.exe");
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("https://github.com/symfony/cli/releases/latest/download/symfony_windows_$arch.exe", "C:\tools\symfony\symfony.exe");
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\tools\symfony", "Machine")
 ```
 
