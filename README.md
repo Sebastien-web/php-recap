@@ -292,3 +292,14 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ```
 choco install yarn --version=1.21.1 -y
 ```
+
+## Apache 2 installation
+
+### Ubuntu 18.04
+
+```
+sudo apt-get install apache2 libapache2-mod-php7.3 -y
+sudo a2enmod rewrite
+sudo a2enmod headers
+sudo systemctl restart apache2
+```
