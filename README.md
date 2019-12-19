@@ -121,14 +121,14 @@ IF ((Get-WmiObject -class Win32_Processor) -like '*Intel*'){$arch="386"} Else {$
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt install php7.3 -y
-sudo apt install php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php-xdebug -y
+sudo apt install php7.3-mbstring php7.3-mysql php7.3-xml php7.3-curl php7.3 -zip php-xdebug -y
 sudo sed -i -e 's/post_max_size = 8M/post_max_size = 64M/g' $(php -r "echo php_ini_loaded_file();")
 sudo sed -i -e 's/upload_max_filesize = 8M/upload_max_filesize = 64M/g' $(php -r "echo php_ini_loaded_file();")
 sudo sed -i -e 's/memory_limit = 128M/memory_limit = -1/g' $(php -r "echo php_ini_loaded_file();")
 sudo update-alternatives --set php /usr/bin/php7.3
 ```
 
-**[Installed PHP Modules]** calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gettext, hash, iconv, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, Phar, posix, readline, Reflection, session, shmop, SimpleXML, sockets, sodium, SPL, standard, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xdebug, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zlib
+**[Installed PHP Modules]** calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gettext, hash, iconv, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, Phar, posix, readline, Reflection, session, shmop, SimpleXML, sockets, sodium, SPL, standard, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xdebug, xml, xmlreader, xmlwriter, xsl, Zend OPcache, zip, zlib
 
 **[Installed Zend Modules]** Xdebug, Zend OPcache
 
