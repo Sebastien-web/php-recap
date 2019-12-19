@@ -235,7 +235,7 @@ choco install mariadb --version=10.4.8 -y
 
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install nodejs=12.13.1-1nodesource1 -y
+sudo apt install nodejs -y
 ```
 
 ### MacOS 10.15
