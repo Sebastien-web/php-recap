@@ -67,6 +67,8 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 
 ## Git installation
 
+![git](https://user-images.githubusercontent.com/6952638/71176962-3a1c4e00-226b-11ea-83a1-5a66bd37a68b.png)
+
 ### Ubuntu 18.04
 
 ```
@@ -85,7 +87,9 @@ brew install git
 choco install git -y
 ```
 
-## Symfony CLI 4.11 installation
+## Symfony CLI installation
+
+![symfony](https://user-images.githubusercontent.com/6952638/71176964-3ab4e480-226b-11ea-8522-081106cbff50.png)
 
 ### Ubuntu 18.04
 
@@ -205,7 +209,7 @@ php -r "unlink('composer-setup.php');"
 
 ## MariaDB 10.4 installation
 
-![mysql](https://user-images.githubusercontent.com/6952638/70372312-a0a18380-18dd-11ea-90df-b25acc5f1684.jpg)
+![mariadb](https://user-images.githubusercontent.com/6952638/71176963-3a1c4e00-226b-11ea-9627-e64caabef009.png)
 
 ### Ubuntu 18.04
 
