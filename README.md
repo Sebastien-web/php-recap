@@ -235,6 +235,8 @@ choco install mariadb --version=10.4.8 -y
 
 ## NodeJS 12 installation
 
+![node](https://user-images.githubusercontent.com/6952638/71177167-a4cd8980-226b-11ea-9095-c96d5b96faa7.png)
+
 ### Ubuntu 18.04
 
 ```
@@ -280,8 +282,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 ### MacOS 10.15
 
 ```
-touch ~/.bash_profile
-touch ~/.zshrc
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
 ```
 
