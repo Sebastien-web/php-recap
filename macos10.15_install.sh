@@ -111,11 +111,6 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Yarn
-sudo touch ~/.bash_profile
-touch ~/.zshrc
-if [[ $? -ne 0 ]] ; then
-    exit 1
-fi
 curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
 if [[ $? -ne 0 ]] ; then
     exit 1
