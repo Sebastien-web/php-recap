@@ -5,7 +5,7 @@ sudo apt update
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sudo apt install curl -y
+sudo apt install software-properties-common curl -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -96,11 +96,11 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # MariaDB
-sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"
+sudo apt update
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
@@ -114,7 +114,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
-sudo apt install nodejs=12.13.1-1nodesource1 -y
+sudo apt install nodejs -y
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
