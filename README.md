@@ -30,7 +30,7 @@ On Ubuntu, CURL is needed in order to install some packages with the default pac
 
 ```bash
 sudo apt update
-sudo apt install curl -y
+sudo apt install software-properties-common curl -y
 ```
 
 ### MacOS 10.15
