@@ -96,7 +96,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # MariaDB
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash
 if [[ $? -ne 0 ]] ; then
     exit 1
 fi
