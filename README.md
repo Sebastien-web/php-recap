@@ -211,6 +211,7 @@ php -r "unlink('composer-setup.php');"
 
 ```
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+sudo apt update
 sudo apt install mariadb-server-10.4 -y
 ```
 
