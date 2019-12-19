@@ -248,13 +248,6 @@ sudo apt install nodejs -y
 
 ```
 brew install node@12
-echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.bash_profile
-```
-
-Then, run the following command to reload your $PATH in order to use node immediately:
-
-```
-export PATH="/usr/local/opt/node@12/bin:$PATH"
 ```
 
 ### Windows 10
